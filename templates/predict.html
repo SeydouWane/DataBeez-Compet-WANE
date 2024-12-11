@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Formulaire de Prédiction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulaire de Prédiction</h1>
+        <form action="/predict" method="POST">
+            <label for="age">Âge:</label>
+            <input type="number" step="0.1" name="age" required>
+            
+            <label for="job">Type de Travail (0-3):</label>
+            <input type="number" step="1" name="job" required>
+            
+            <label for="housing">Logement:</label>
+            <select name="housing" required>
+                <option value="own">Propriétaire</option>
+                <option value="rent">Locataire</option>
+                <option value="free">Gratuit</option>
+            </select>
+            
+            <label for="saving_accounts">Comptes d'Épargne:</label>
+            <select name="saving_accounts" required>
+                <option value="little">Peu</option>
+                <option value="moderate">Modéré</option>
+                <option value="quite rich">Assez riche</option>
+                <option value="rich">Riche</option>
+            </select>
+            
+            <label for="checking_account">Montant du Compte Courant:</label>
+            <input type="number" step="0.1" name="checking_account" required>
+            
+            <label for="credit_amount">Montant du Crédit:</label>
+            <input type="number" step="0.1" name="credit_amount" required>
+            
+            <label for="duration">Durée (en mois):</label>
+            <input type="number" step="1" name="duration" required>
+            
+            <label for="purpose">But:</label>
+            <select name="purpose" required>
+                <option value="car">Voiture</option>
+                <option value="furniture/equipment">Mobilier/Équipement</option>
+                <option value="radio/TV">Radio/TV</option>
+                <option value="domestic appliances">Appareils ménagers</option>
+                <option value="repairs">Réparations</option>
+                <option value="education">Éducation</option>
+                <option value="business">Affaires</option>
+                <option value="vacation/others">Vacances/Autres</option>
+            </select>
+
+            <button type="submit">Prédire</button>
+        </form>
+    </div>
+</body>
+</html>

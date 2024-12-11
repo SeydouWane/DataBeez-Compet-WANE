@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Résultat de Prédiction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Résultats de la Prédiction</h1>
+        <p><strong>Risque de Crédit :</strong> {{ 'Mauvais' if prediction == 1 else 'Bon' }}</p>
+        <p><strong>Probabilité de Mauvais Crédit :</strong> {{ probability|round(2) }}</p>
+        <a href="/" class="btn">Retour à l'Accueil</a>
+    </div>
+</body>
+</html>
